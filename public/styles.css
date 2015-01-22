@@ -1,0 +1,142 @@
+/* Borrowing David Zulaica's resets */
+
+*::before, *::after, * {
+  /*
+  Apply a more natural box layout model to all elements. This can be
+  overridden by setting a specific element's `box-sizing:` to `content-box`.
+  */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /*
+  Establish custom easing function.
+  */
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html, body {
+  margin: 0;
+}
+
+html {
+  /*
+  Prevent fonts from automatically zooming in mobile browsers. A value of
+  `100%` still allows for pinch-zoom input. (`none` disables pinch-zoom.)
+  */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*
+  Basic typography sets the foundation for vertical rhythm and relative size
+  between elements.
+  */
+  font-size: 16px;
+  line-height: 1.5em;
+  vertical-align: baseline;
+  /*
+  Ligagures and kerning are ALL over the place.
+  */
+  text-rendering: optimizeLegibility;
+  -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures;
+  -moz-font-variant-ligatures: common-ligatures discretionary-ligatures;
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
+  /*
+  Chrome and Opera do not support the `auto` value for hyphens:. Chrome does
+  support `none`, however.
+  http://caniuse.com/#feat=css-hyphens
+  */
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  /*
+  Render fonts consistently. Without these, fonts flicker in Safari and links
+  get bolder on :hover in Chrome. Need to explore this issue more. Mozilla
+  looks best left alone but shooting for consistency for the time being; this
+  might eventually be a Webkit-specific "fix" if I decide it's okay for
+  Mozilla to render differently.
+  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  outline: 0;
+}
+
+
+/* End of our reset */
+
+/* Global CSS */
+body {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+label, input {
+  margin-right: 10px;
+}
+
+input {
+  padding: 2px 5px;
+}
+
+ul {
+  margin-bottom: 80px;
+}
+
+.label-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.label-group label {
+  display: inline-block;
+  min-width: 57px;
+  width: 20%;
+}
+
+.label-group input {
+  width: 70%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+  min-height: 500px;
+  height: auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(25%);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
+  padding: 35px;
+  background-color: rgb(255, 255, 177);
+}

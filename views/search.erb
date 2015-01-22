@@ -1,0 +1,14 @@
+<section>
+  <% if @results == [] %>
+  <p>Nope.</p>
+  <% else %>
+  <dl>
+    <% @results.each() do |the_book| %>
+    <dt><%= the_book.title() %></dt>
+    <dd><%= the_book.author() %></dd>
+    <% end %>
+  </dl>
+  <% end %>
+</section>
+
+<a href="/">Home</a>
